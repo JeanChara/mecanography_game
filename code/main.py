@@ -71,7 +71,7 @@ class MainGame:
         for i, linea in enumerate(palabra_lineas):
             palabra_renderizada = self.font.render(linea, True, self.BLACK)
             y_offset = i * (palabra_renderizada.get_height() + 10)
-            self.screen.blit(palabra_renderizada, (self.WIDTH // 2 - palabra_renderizada.get_width() // 2, self.HEIGHT // 3 - palabra_renderizada.get_height() // 2 + y_offset))
+            self.screen.blit(palabra_renderizada, (self.WIDTH // 2 - palabra_renderizada.get_width() // 2, self.HEIGHT // 3+30 - palabra_renderizada.get_height() // 2 + y_offset))
 
     def mostrar_temporizador(self, tiempo_restante):
         texto_temporizador = self.font.render("Tiempo Restante: {} s".format(tiempo_restante), True, self.BLACK)
