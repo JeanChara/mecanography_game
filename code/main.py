@@ -25,13 +25,29 @@ class MainGame:
         self.font = pygame.font.Font(None, self.FONT_SIZE)
 
         # Lista de palabras/Enunciados para el juego
-        self.palabras = ["Enunciado",
-                        "juego",
-                        "teclado", 
-                        "programacion", 
-                        "pygame", 
-                        "mecanografia", 
-                        "Prototipo"]
+        self.palabras = ["Microprocesador",
+                        "Memoria RAM",
+                        "Registro", 
+                        "Instrucción", 
+                        "Teclado", 
+                        "Programacion", 
+                        "Pygame", 
+                        "Mecanografia",
+                        "Bus de datos",
+                        "Bus de direcciones",
+                        "Memoria Cache",
+                        "ALU (Unidad Lógica Aritmética)",
+                        "Sistema Operativo",
+                        "BIOS",
+                        "Interruptor",
+                        "Decodificador de Instrucciones",
+                        "mov ah, dato",
+                        "Lenguaje maquina",
+                        "8 bits = 1 byte",
+                        "1 Kilobyte (KB) = 1024 bytes",
+                        "1 Megabyte (MB) = 1.024 KB",
+                        "1 Gigabyte (GB) = 1.024 MB",
+                        "1 Terabyte (TB) = 1.024 GB"]
         
     # Función para obtener una nueva palabra aleatoria de nuestro array de palabras
     def obtener_palabra_aleatoria(self):
