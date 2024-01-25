@@ -25,13 +25,29 @@ class MainGame:
         self.font = pygame.font.Font("../fuente/Cafe.ttf", self.FONT_SIZE)
 
         # Lista de palabras/Enunciados para el juego
-        self.palabras = ["En la representacion analogica una cantidad se representa mediante un indicador proporcional que varía en forma       continua",
-                        "En la representacion digital las cantidades se representan no mediante indicadores que varoan en forma continua, sino mediante símbolos llamados digitos",
-                        "Un sistema digital es la combinacion de dispositivos diseñados para manipular informacion logica o cantidades fisicas que se representan en forma digital", 
-                        "Los dispositivos perifericos son los que permiten la entrada de datos al computador, y la salida de informacion una vez procesada", 
-                        "El ciclo para ejecutar cualquier instrucción se divide en ciclo de busqueda y ciclo de instruccion", 
-                        "Un computador tiene una gran cantidad de dispositivos de entrada y salida", 
-                        "La conexión entre los diversos componentes de un computador se efectua fisicamente a traves de los buses"]
+        self.palabras = ["Microprocesador",
+                        "Memoria RAM",
+                        "Registro", 
+                        "Instrucción", 
+                        "Teclado", 
+                        "Programacion", 
+                        "Pygame", 
+                        "Mecanografia",
+                        "Bus de datos",
+                        "Bus de direcciones",
+                        "Memoria Cache",
+                        "ALU (Unidad Lógica Aritmética)",
+                        "Sistema Operativo",
+                        "BIOS",
+                        "Interruptor",
+                        "Decodificador de Instrucciones",
+                        "mov ah, dato",
+                        "Lenguaje maquina",
+                        "8 bits = 1 byte",
+                        "1 Kilobyte (KB) = 1024 bytes",
+                        "1 Megabyte (MB) = 1.024 KB",
+                        "1 Gigabyte (GB) = 1.024 MB",
+                        "1 Terabyte (TB) = 1.024 GB"]
         
     # Función para obtener una nueva palabra aleatoria de nuestro array de palabras
     def obtener_palabra_aleatoria(self):
