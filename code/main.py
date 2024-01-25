@@ -20,7 +20,7 @@ class MainGame:
         self.screen = pygame.display.set_mode((self.WIDTH, self.HEIGHT))
         pygame.display.set_caption("Juego de Mecanografía")
         self.clock = pygame.time.Clock()
-
+        
         # Cargar la fuente
         self.font = pygame.font.Font("../fuente/Cafe.ttf", self.FONT_SIZE)
 
@@ -111,6 +111,8 @@ class MainGame:
     def run(self):
         # seleccion y reproduccion de musica
         music_files = ["../sfx/song1.OGG",] # Agregar musica en caso se desee, la musica utilizada no es de nuestra pertenencia
+        #Sonido de error
+        fallo_sound = pygame.mixer.Sound("../sfx/error.mp3")
         current_song_index = 0
         pygame.mixer.music.load(music_files[current_song_index])
         pygame.mixer.music.set_volume(0.15)
@@ -157,6 +159,7 @@ class MainGame:
                             input_usuario = ""
                             fallos += 1
                             tiempo_restante -= 1
+                            fallo_sound.play()
                     elif event.key == pygame.K_RETURN and not temporizador_iniciado: # Para iniciar el temporizador e iniciar el juego al presionar ENTER
                         temporizador_iniciado = True
                         aciertos = 0
