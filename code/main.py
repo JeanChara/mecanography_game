@@ -13,7 +13,7 @@ class MainGame:
         self.WHITE = (255, 255, 255)
         self.BLACK = (0, 0, 0)
         self.GRAY = (128, 128, 128)
-        self.FONT_SIZE = 36
+        self.FONT_SIZE = 30
         self.VERDE = (0, 255, 0)
         
         # Inicializar la pantalla
@@ -22,16 +22,16 @@ class MainGame:
         self.clock = pygame.time.Clock()
 
         # Cargar la fuente
-        self.font = pygame.font.Font(None, self.FONT_SIZE)
+        self.font = pygame.font.Font("../fuente/Cafe.ttf", self.FONT_SIZE)
 
         # Lista de palabras/Enunciados para el juego
-        self.palabras = ["Enunciado",
-                        "juego",
-                        "teclado", 
-                        "programacion", 
-                        "pygame", 
-                        "mecanografia", 
-                        "Prototipo"]
+        self.palabras = ["En la representacion analogica una cantidad se representa mediante un indicador proporcional que varía en forma       continua",
+                        "En la representacion digital las cantidades se representan no mediante indicadores que varoan en forma continua, sino mediante símbolos llamados digitos",
+                        "Un sistema digital es la combinacion de dispositivos diseñados para manipular informacion logica o cantidades fisicas que se representan en forma digital", 
+                        "Los dispositivos perifericos son los que permiten la entrada de datos al computador, y la salida de informacion una vez procesada", 
+                        "El ciclo para ejecutar cualquier instrucción se divide en ciclo de busqueda y ciclo de instruccion", 
+                        "Un computador tiene una gran cantidad de dispositivos de entrada y salida", 
+                        "La conexión entre los diversos componentes de un computador se efectua fisicamente a traves de los buses"]
         
     # Función para obtener una nueva palabra aleatoria de nuestro array de palabras
     def obtener_palabra_aleatoria(self):
@@ -100,7 +100,7 @@ class MainGame:
         pygame.mixer.music.set_volume(0.15)
         pygame.mixer.music.play()
 
-        background = pygame.image.load("../img/background_mecanography.png").convert()
+        background = pygame.image.load("../img/fondo.jpg").convert()
         palabra_actual = self.obtener_palabra_aleatoria()
         input_usuario = ""
         palabra_completada = False
@@ -112,7 +112,7 @@ class MainGame:
         speed_y = 1
         felicitacion = False
         temporizador_iniciado = True
-        tiempo_limite = 10
+        tiempo_limite = 50
         tiempo_restante = tiempo_limite
         aux_tiempo = 0
 
