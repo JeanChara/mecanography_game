@@ -75,14 +75,14 @@ class MainGame:
 
     def mostrar_temporizador(self, tiempo_restante):
         texto_temporizador = self.font.render("Tiempo Restante: {} s".format(tiempo_restante), True, self.BLACK)
-        self.screen.blit(texto_temporizador, (10, 10))
+        self.screen.blit(texto_temporizador, (20, 15))
 
     def mostrar_estadisticas_basicas(self, aciertos, fallos):
         aciertos_renderizados = self.font.render("Aciertos: "+str(aciertos), True, self.BLACK)
-        self.screen.blit(aciertos_renderizados, (self.WIDTH // 4 , self.HEIGHT // 15))
+        self.screen.blit(aciertos_renderizados, (self.WIDTH // 4 +30, self.HEIGHT // 9))
 
         fallos_renderizados = self.font.render("Fallos: "+str(fallos), True, self.BLACK)
-        self.screen.blit(fallos_renderizados, (self.WIDTH // 2 , self.HEIGHT // 15))
+        self.screen.blit(fallos_renderizados, (self.WIDTH // 2 +30, self.HEIGHT // 9))
     def mostrar_estadisticas_finales(self, aciertos, fallos, letras_acertadas, tiempo_limite):
         fondo = pygame.Surface((self.WIDTH, self.HEIGHT), pygame.SRCALPHA)
         fondo.fill((0, 0, 0, 128)) # Fondo semi-transparente
@@ -156,6 +156,7 @@ class MainGame:
                         else:
                             input_usuario = ""
                             fallos += 1
+                            tiempo_restante -= 1
                     elif event.key == pygame.K_RETURN and not temporizador_iniciado: # Para iniciar el temporizador e iniciar el juego al presionar ENTER
                         temporizador_iniciado = True
                         aciertos = 0
@@ -170,6 +171,7 @@ class MainGame:
                     palabra_completada = True
                     palabra_actual = self.obtener_palabra_aleatoria()
                     input_usuario = ""
+                    tiempo_restante += 5
                 else:
                     palabra_completada = False
                 
@@ -193,7 +195,7 @@ class MainGame:
 
                 self.mostrar_palabra_actual(palabra_actual) # Renderizar la palabra actual
                 letras_renderizadas = self.font.render("Letras correctas: " + "".join(letras_correctas), True, self.VERDE)
-                self.screen.blit(letras_renderizadas, (self.WIDTH // 4, self.HEIGHT // 10))
+                self.screen.blit(letras_renderizadas, (self.WIDTH // 4+30, self.HEIGHT // 6))
                 self.mostrar_estadisticas_basicas(aciertos, fallos)
                 self.mostrar_temporizador(tiempo_restante)
 
