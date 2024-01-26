@@ -22,7 +22,7 @@ class MainGame:
         self.clock = pygame.time.Clock()
         
         # Cargar la fuente
-        self.font = pygame.font.Font("../fuente/Cafe.ttf", self.FONT_SIZE)
+        self.font = pygame.font.Font("../fuente/Winter Storm.ttf", self.FONT_SIZE)
 
         # Lista de palabras/Enunciados para el juego
         self.palabras = ["Microprocesador",
@@ -162,6 +162,7 @@ class MainGame:
                             fallo_sound.play()
                     elif event.key == pygame.K_RETURN and not temporizador_iniciado: # Para iniciar el temporizador e iniciar el juego al presionar ENTER
                         temporizador_iniciado = True
+                        tiempo_restante = tiempo_limite
                         aciertos = 0
                         fallos = 0
                         letras_acertadas = 0
