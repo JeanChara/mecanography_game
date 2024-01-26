@@ -175,7 +175,7 @@ class MainGame:
                     palabra_completada = True
                     palabra_actual = self.obtener_palabra_aleatoria()
                     input_usuario = ""
-                    tiempo_restante += 5
+                    tiempo_restante += 3
                 else:
                     palabra_completada = False
                 
