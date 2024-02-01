@@ -113,6 +113,7 @@ class MainGame:
         music_files = ["../sfx/song1.OGG",] # Agregar musica en caso se desee, la musica utilizada no es de nuestra pertenencia
         #Sonido de error
         fallo_sound = pygame.mixer.Sound("../sfx/error.mp3")
+        fallo_sound.set_volume(0.2)
         current_song_index = 0
         pygame.mixer.music.load(music_files[current_song_index])
         pygame.mixer.music.set_volume(0.15)
